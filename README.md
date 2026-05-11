@@ -134,21 +134,18 @@ susidua/
 
 ## Adding Step Photos
 
-Place your instructional photos at:
 ```
-client/public/assets/step_1.jpg
-client/public/assets/step_2.jpg
-client/public/assets/step_3.jpg
-client/public/assets/step_4.jpg
-client/public/assets/step_5.jpg
+client/public/step_1.jpg
+client/public/step_2.jpg
+client/public/step_3.jpg
+client/public/step_4.jpg
+client/public/step_5.jpg
 ```
 
 Hero section images:
 ```
-client/public/assets/hero-1.jpg  (cozy room photo)
-client/public/assets/hero-2.jpg  (modern apartment photo)
-client/public/assets/hero-3.jpg  (room with plants)
-client/public/assets/hero-4.jpg  (roommates discussing)
+client/public/mainbanner.jpg  (homepage picture)
+
 ```
 
 ---
