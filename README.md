@@ -39,6 +39,8 @@ susidua/
 ├── client/                  # React Frontend
 │   ├── public/
 │   │   └── index.html
+│   │   mainbanner.jpg
+│   │   step1.jpg – step5.jpg
 │   └── src/
 │       ├── components/
 │       │   ├── Navbar.jsx + .css
@@ -47,32 +49,50 @@ susidua/
 │       ├── context/
 │       │   └── AuthContext.jsx   # JWT auth state
 │       ├── pages/
-│       │   ├── HomePage.jsx      # Hero + listings + how-it-works teaser
-│       │   ├── AdsPage.jsx       # Listings with sidebar filters
-│       │   ├── CreateAdPage.jsx  # Post an ad (rent or seek)
-│       │   ├── HowItWorksPage.jsx # Step-by-step guide (5 steps with photo slots)
-│       │   ├── ChatPage.jsx      # Real-time chat with Socket.IO
+│       │   ├── HomePage.jsx + .css      # Hero + listings
+│       │   ├── AdsPage.jsx + .css       # Listings with sidebar filters
+│       │   ├── AdDetailPage.jsx         # Single ad view
+│       │   ├── CreateAdPage.jsx + .css  # Post an ad
+│       │   ├── HowItWorksPage.jsx + .css
+│       │   ├── ChatPage.jsx + .css      # Real-time chat
+│       │   ├── AuthPage.jsx + .css      # Login/Register combined
 │       │   ├── LoginPage.jsx
-│       │   └── RegisterPage.jsx
+│       │   ├── RegisterPage.jsx
+│       │   ├── ProfilePage.jsx + .css   # User profile
+│       │   ├── RoommatesPage.jsx        # Roommate search
+│       │   ├── ContactPage.jsx
+│       │   ├── CookiePage.jsx
+│       │   ├── PrivacyPage.jsx
+│       │   ├── SafetyPage.jsx
+│       │   ├── TermsPage.jsx
+│       │   └── TipsPage.jsx
 │       ├── utils/
 │       │   └── api.js            # Axios API helpers
 │       ├── App.jsx               # Routes
-│       └── index.css             # Design system (CSS variables, utilities)
+│       └── index.css             # Design system
+│   ├── craco.config.js
+│   ├── package.json
+│   └── package-lock.json
 │
-└── server/                  # Node.js Backend
-    ├── models/
-    │   ├── User.js           # Profile, bio, preferences
-    │   ├── Ad.js             # Rooms/apartments + amenities
-    │   └── Message.js        # Chat messages
-    ├── routes/
-    │   ├── auth.js           # register, login, /me
-    │   ├── ads.js            # CRUD + save/unsave
-    │   ├── messages.js       # Conversations + send
-    │   └── users.js          # Public profiles
-    ├── middleware/
-    │   └── auth.js           # JWT protect middleware
-    ├── uploads/              # User-uploaded photos (gitignored)
-    └── index.js              # Express + Socket.IO entry point
+├── server/                  # Node.js Backend
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Ad.js
+│   │   └── Message.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── ads.js
+│   │   ├── messages.js
+│   │   └── users.js
+│   ├── middleware/
+│   │   └── auth.js           # JWT protect middleware
+│   └── index.js              # Express entry point
+│
+├── .env
+├── .gitignore
+├── package.json
+└── README.md
+
 ```
 
 ---
