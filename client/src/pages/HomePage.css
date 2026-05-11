@@ -1,0 +1,252 @@
+/* ── Hero ───────────────────────────────────────────── */
+.hero {
+  overflow: hidden;
+}
+
+.hero__banner-wrap {
+  position: relative;
+  width: 100%;
+  height: 680px;
+}
+
+.hero__banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero__banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(244, 241, 236, 0.92) 40%, rgba(244, 241, 236, 0) 75%);
+  display: flex;
+  align-items: center;
+}
+
+.hero__banner-overlay .container {
+  max-width: 500px;
+  margin-left: 8%;
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1.5px solid var(--clr-accent);
+  color: var(--clr-primary);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero__title {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: var(--clr-text);
+}
+.hero__title em { font-style: normal; color: var(--clr-primary); }
+.hero__accent { color: var(--clr-primary); }
+
+.hero__desc {
+  color: var(--clr-text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.hero__stats {
+  display: flex;
+  gap: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--clr-beige-dk);
+}
+
+.stat__value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+.stat__label {
+  font-size: 12px;
+  color: var(--clr-text-muted);
+}
+
+/* ── Sections ───────────────────────────────────────── */
+.section { padding: 80px 0; }
+
+.section-title {
+  font-size: clamp(24px, 3vw, 36px);
+  margin-bottom: 8px;
+}
+.section-sub {
+  color: var(--clr-text-muted);
+  margin-bottom: 32px;
+}
+
+/* ── Search Bar ─────────────────────────────────────── */
+.search-bar {
+  display: flex;
+  gap: 12px;
+  background: white;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.search-bar .form-input { flex: 1; min-width: 160px; border: none; background: var(--clr-beige); }
+.search-input { min-width: 200px !important; }
+.search-bar .btn { flex-shrink: 0; }
+
+/* ── Tabs ───────────────────────────────────────────── */
+.listings__tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.tab-btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--clr-text-muted);
+  border: 1.5px solid var(--clr-beige-dk);
+  background: white;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.tab-btn.active {
+  background: var(--clr-primary);
+  color: white;
+  border-color: var(--clr-primary);
+}
+
+/* ── Listings Grid ──────────────────────────────────── */
+.listings__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.skeleton-card { pointer-events: none; }
+
+/* ── How-it-works teaser ─────────────────────────────── */
+.how-teaser {
+  background: var(--clr-primary-dk);
+  padding: 80px 0;
+  color: white;
+}
+.how-teaser .section-title { color: white; }
+.how-teaser .section-sub { color: rgba(255,255,255,.6); }
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.step-card {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-num {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: rgba(255,255,255,.2);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.step-icon { font-size: 28px; }
+
+.step-card h3 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+.step-card p {
+  font-size: 13px;
+  color: rgba(255,255,255,.65);
+  line-height: 1.6;
+}
+
+.how-teaser .btn-outline {
+  border-color: rgba(255,255,255,.4);
+  color: white;
+}
+.how-teaser .btn-outline:hover {
+  background: white;
+  color: var(--clr-primary-dk);
+}
+
+@media (max-width: 468px) {
+  .hero__banner-wrap {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center; /* Центруємо вміст */
+    align-items: center; /* Центруємо вміст */
+    padding: 0;
+    position: relative;
+  }
+
+  .hero__banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Зображення по центру */
+    opacity: 0.5; /* Робимо зображення напівпрозорим */
+  }
+
+  /* Додаємо легкий білий overlay для ще кращої читабельності */
+  .hero__banner-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* Білий overlay з прозорістю */
+    z-index: 1;
+  }
+
+  .hero__banner-content {
+    position: relative;
+    z-index: 2; /* Контент поверх зображення та overlay */
+    padding: 20px;
+    text-align: center; /* Центруємо текст */
+  }
+
+  .hero__title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+}
