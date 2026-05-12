@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -51,7 +51,7 @@ function PrivateRoute({ children }) {
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Layout><HomePage /></Layout>} />
           <Route path="/ads" element={<Layout><AdsPage /></Layout>} />
@@ -71,7 +71,7 @@ export default function App() {
           <Route path="/privacy" element={<Layout><PrivacyPage /></Layout>} />
           <Route path="/cookies" element={<Layout><CookiePage /></Layout>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }
